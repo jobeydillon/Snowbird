@@ -1,4 +1,5 @@
 import React, { useMemo, useState } from "react";
+import logo from "./logo.svg";
 
 export default function Home() {
   // ---- Global UI State ----
@@ -171,22 +172,21 @@ export default function Home() {
       <header className="bg-white/80 backdrop-blur shadow-sm sticky top-0 z-50">
         <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
           <div className="flex items-center gap-3">
-            {/* Mock logo placeholder */}
-            <div className="w-9 h-9 rounded-xl bg-blue-700 text-white grid place-items-center font-bold">SV</div>
-            <h1 className="text-2xl font-bold text-blue-700">{BUSINESS_NAME}</h1>
+            <img src={logo} alt="Snowbird logo" className="h-9 w-auto" />
+            <h1 className="text-2xl font-bold text-navy">{BUSINESS_NAME}</h1>
           </div>
           <nav className="space-x-6 text-gray-600 font-medium">
-            <a href="#services" onClick={(e)=>handleNavClick(e,'services')} className="hover:text-blue-700">Services</a>
-            <a href="#pricing" onClick={(e)=>handleNavClick(e,'pricing')} className="hover:text-blue-700">Pricing</a>
-            <a href="#areas" onClick={(e)=>handleNavClick(e,'areas')} className="hover:text-blue-700">Service Area</a>
-            <a href="#faq" onClick={(e)=>handleNavClick(e,'faq')} className="hover:text-blue-700">FAQ</a>
-            <a href="#contact" onClick={(e)=>handleNavClick(e,'contact')} className="hover:text-blue-700">Contact</a>
+            <a href="#services" onClick={(e)=>handleNavClick(e,'services')} className="hover:text-navy">Services</a>
+            <a href="#pricing" onClick={(e)=>handleNavClick(e,'pricing')} className="hover:text-navy">Pricing</a>
+            <a href="#areas" onClick={(e)=>handleNavClick(e,'areas')} className="hover:text-navy">Service Area</a>
+            <a href="#faq" onClick={(e)=>handleNavClick(e,'faq')} className="hover:text-navy">FAQ</a>
+            <a href="#contact" onClick={(e)=>handleNavClick(e,'contact')} className="hover:text-navy">Contact</a>
           </nav>
         </div>
       </header>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-700 to-indigo-700 text-white py-20 text-center">
+      <section className="bg-navy text-white py-20 text-center">
         <h2 className="text-4xl font-bold mb-4">Peace of Mind for Your Car While You’re Away</h2>
         <p className="text-lg max-w-2xl mx-auto mb-6">
           Monthly vehicle management for Phoenix snowbirds and seasonal travelers. We keep your car running, charged, and ready when you return.
@@ -194,7 +194,7 @@ export default function Home() {
         <a
           href="#pricing"
           onClick={(e)=>handleNavClick(e,'pricing')}
-          className="bg-white text-blue-700 px-6 py-3 rounded-2xl font-semibold shadow hover:bg-gray-100 transition inline-block"
+          className="bg-white text-navy px-6 py-3 rounded-2xl font-semibold shadow hover:bg-gray-100 transition inline-block"
         >
           View Plans
         </a>
@@ -234,7 +234,7 @@ export default function Home() {
                     <li key={i}>✔ {b}</li>
                   ))}
                 </ul>
-                <button onClick={() => handleSubscribe(p.name)} className="bg-blue-700 text-white px-6 py-3 rounded-2xl font-semibold shadow hover:bg-blue-800 transition mt-auto">Get Started</button>
+                <button onClick={() => handleSubscribe(p.name)} className="bg-navy text-white px-6 py-3 rounded-2xl font-semibold shadow hover:bg-navy transition mt-auto">Get Started</button>
               </div>
             ))}
           </div>
@@ -272,11 +272,11 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="bg-blue-700 text-white py-16">
+      <section id="contact" className="bg-navy text-white py-16">
         <div className="max-w-6xl mx-auto px-6 text-center">
           <h3 className="text-3xl font-bold mb-6">Get In Touch</h3>
           <p className="mb-6">Questions or ready to sign up? Reach out today!</p>
-          <a href={`mailto:${BUSINESS_EMAIL}`} className="bg-white text-blue-700 px-6 py-3 rounded-2xl font-semibold shadow hover:bg-gray-100 transition inline-block">
+          <a href={`mailto:${BUSINESS_EMAIL}`} className="bg-white text-navy px-6 py-3 rounded-2xl font-semibold shadow hover:bg-gray-100 transition inline-block">
             Email Us
           </a>
         </div>
@@ -384,7 +384,7 @@ export default function Home() {
 
                 <div className="flex flex-col sm:flex-row gap-3 justify-end pt-2">
                   <button type="button" onClick={() => setIsModalOpen(false)} className="px-5 py-2 rounded-xl border border-gray-300 text-gray-700 hover:bg-gray-50">Cancel</button>
-                  <button type="submit" className="px-5 py-2 rounded-xl bg-blue-700 text-white font-semibold hover:bg-blue-800 shadow">Continue</button>
+                  <button type="submit" className="px-5 py-2 rounded-xl bg-navy text-white font-semibold hover:bg-navy shadow">Continue</button>
                 </div>
               </form>
             ) : (
@@ -412,7 +412,7 @@ export default function Home() {
                     <button className="px-5 py-2 rounded-xl bg-black text-white font-semibold hover:bg-gray-900 shadow" onClick={() => setShowMockCheckout(true)}>
                       Continue to Stripe (demo)
                     </button>
-                    <a href={mailtoHref()} className="px-5 py-2 rounded-xl bg-blue-700 text-white font-semibold hover:bg-blue-800 shadow text-center">
+                    <a href={mailtoHref()} className="px-5 py-2 rounded-xl bg-navy text-white font-semibold hover:bg-navy shadow text-center">
                       Email me a confirmation
                     </a>
                     <button onClick={() => setIsModalOpen(false)} className="px-5 py-2 rounded-xl border border-gray-300 text-gray-700 hover:bg-gray-50">
@@ -443,7 +443,7 @@ export default function Home() {
               <p>Services are for vehicle wellness (starts, checks, optional short drives) and do not include storage.</p>
             </div>
             <div className="px-6 py-4 border-t text-right">
-              <button onClick={() => setTermsOpen(false)} className="px-5 py-2 rounded-xl bg-blue-700 text-white font-semibold hover:bg-blue-800 shadow">Close</button>
+              <button onClick={() => setTermsOpen(false)} className="px-5 py-2 rounded-xl bg-navy text-white font-semibold hover:bg-navy shadow">Close</button>
             </div>
           </div>
         </div>
@@ -462,7 +462,7 @@ export default function Home() {
               <p>Payment processing will be handled by Stripe. We do not store full card details on our servers.</p>
             </div>
             <div className="px-6 py-4 border-t text-right">
-              <button onClick={() => setPrivacyOpen(false)} className="px-5 py-2 rounded-xl bg-blue-700 text-white font-semibold hover:bg-blue-800 shadow">Close</button>
+              <button onClick={() => setPrivacyOpen(false)} className="px-5 py-2 rounded-xl bg-navy text-white font-semibold hover:bg-navy shadow">Close</button>
             </div>
           </div>
         </div>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="260" viewBox="0 0 240 260">
+  <g fill="none" stroke="#0D2240" stroke-width="8">
+    <path d="M120 20L40 60v60c0 60 40 110 80 120 40-10 80-60 80-120V60L120 20z" />
+    <rect x="102" y="60" width="36" height="32" rx="4" />
+    <path d="M120 60v-12a12 12 0 00-24 0v12" />
+    <path d="M60 132h120l12 36H48z" fill="#0D2240" stroke-width="0" />
+    <circle cx="90" cy="168" r="10" fill="white" stroke="#0D2240" stroke-width="8" />
+    <circle cx="150" cy="168" r="10" fill="white" stroke="#0D2240" stroke-width="8" />
+  </g>
+  <text x="120" y="228" text-anchor="middle" font-family="serif" font-size="32" fill="#0D2240" font-weight="600">SNOWBIRD</text>
+  <text x="120" y="248" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#0D2240">VEHICLE WATCH &amp; CARE</text>
+</svg>

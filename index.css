@@ -1,5 +1,20 @@
+:root {
+  --navy: #0D2240;
+}
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   background: #f9f9f9;
+}
+.bg-navy {
+  background-color: var(--navy);
+}
+.text-navy {
+  color: var(--navy);
+}
+.hover\:text-navy:hover {
+  color: var(--navy);
+}
+.hover\:bg-navy:hover {
+  background-color: var(--navy);
 }
